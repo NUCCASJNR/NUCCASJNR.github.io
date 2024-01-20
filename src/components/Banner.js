@@ -13,10 +13,22 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   // const toRotate = ["Python Developer", "Linux Adminstrator", "Web Developer", "Web Designer", "UI/UX Designer" ];
   const roles = {
-    development: ["Python Developer", "Backend Developer"],
-    systemAdministration: ["Linux Expert"],
-  };
+    development: [
+      "Python Developer",
+      "Backend Engineer",
+      "Web Developer (Django/Flask)",
+      "RESTful API Developer",
+      "Linux System Administrator",
+    ],
+      languages: ["Python"],
+      frameworks: ["Django", "Flask"],
+      tools: ["Git", "Docker"],
+      databases: ["PostgreSQL", "MySQL"],
+      devOps: ["Linux", "Nginx", "Gunicorn"],
+      testing: ["Unit Testing", "Integration Testing"],
 
+  };
+  
   // Flattening the roles object to get the toRotate array
   const toRotate = Object.values(roles).flat();
 
@@ -73,17 +85,17 @@ export const Banner = () => {
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>
-                    {`Hi! I'm Al-Areef`} <br />
+                  {`Holla! I'm Al-Areef`} <br /> {`😎`} {/* This is the smiling face with sunglasses emoji */}
                     <span
                       className="txt-rotate"
                       dataPeriod="1000"
-                      data-rotate='["Python Developer",  "Backend Engineer", "Web Designer" ]'
+                      data-rotate='["Python Developer",  "Backend Engineer"]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>
-                    Software Engineer | Python Developer | Backend Developer |
+                    Python Developer | Backend Engineer |
                   </p>
                   <button onClick={() => console.log("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />

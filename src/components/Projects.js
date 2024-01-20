@@ -1,9 +1,9 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import humandect from "../assets/img/projects/humandect.png";
-import ChatGptC from "../assets/img/projects/chagptclone.png";
-import Dammark from "../assets/img/projects/Dammark.png";
-import Logistics from "../assets/img/projects/Logistics.png"
+import Bank from "../assets/img/projects/Bank.jpeg";
+import Python from "../assets/img/skills/python.svg";
+import Polyglotte from "../assets/img/projects/Polyglotte.png";
+import CommunityCatalyst from "../assets/img/projects/CommunityCatalyst.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import TrackVisibility from "react-on-screen"
 import "animate.css";
@@ -11,57 +11,57 @@ import "animate.css";
 export const Projects = () => {
   const workProjects = [
     {
-      title: "Dammark Global Resources",
-      tagLine: "a consultancy firm in Ibadan, Nigeria that specializes in business and HR consulting, financial advisory, project management",
-      imgUrl: Dammark,
-      githubUrl: "https://dammarkglobalresources.com.ng/",
-      deployedUrl: "https://dammarkglobalresources.com.ng/",
+      title: "Community Catalyst",
+      tagLine: "Community Catalyst is a crowdfunding platform for community projects.",
+      imgUrl: CommunityCatalyst,
+      githubUrl: "https://github.com/NUCCASJNR/CommunityCatalyst",
+      // deployedUrl: "https://dammarkglobalresources.com.ng/",
     },
     {
-      title: "Logistics Website",
+      title: "Polyglotte",
       tagLine:
-        "Logistics Website.",
-      imgUrl: Logistics,
-      githubUrl: "https://logistics.dammarkglobalresources.com.ng",
-      deployedUrl: "https://logistics.dammarkglobalresources.com.ng",
+      "Polyglotte is a blogging platform that allows users to create and read blog in their desired language.",
+      imgUrl: Polyglotte,
+      githubUrl: "https://github.com/NUCCASJNR/polyglotte",
+      deployedUrl: "https://github.com/NUCCASJNR/polyglotte",
     },
   ];
 
   const sideProjects = [
     {
-      title: "ChatGptClone",
-      tagLine: "ChatGptClone is a clone of OpenAI's ChatGPT virtual assistant, built using Python and the openai api",
-      imgUrl: ChatGptC,
-      githubUrl: "https://github.com/CyberRide/ChatGptClone",
-      deployedUrl: "https://github.com/CyberRide/ChatGptClone",
+      title: "PayStackPyAPI",
+      tagLine: "A Python package designed to simplify and streamline Paystack API integration, enabling secure online payment processing in your Python applications.",
+      imgUrl: Python,
+      githubUrl: "https://github.com/NUCCASJNR/PaystackPyAPI",
+      deployedUrl: "https://pypi.org/project/paystackpyAPI/",
     },
     {
-      title: "Human-Detection-Web-App",
+      title: "CommandIQ-Bank-API",
       tagLine:
-        "A Flask-based web app for detecting humans in images using OpenCV and NumPy, with a user-friendly interface built using HTML, Bootstrap, and JavaScript.",
-      imgUrl: humandect,
-      githubUrl: "https://github.com/CyberRide/Human-Detection-Web-App",
-      deployedUrl: "https://github.com/CyberRide/Human-Detection-Web-App",
+        "A Django RESTful API for a banking system, with support for user authentication, account creation, and transaction processing.",
+      imgUrl: Bank,
+      githubUrl: "https://github.com/NUCCASJNR/CommandIQ-Bank-API",
+      deployedUrl: "https://github.com/NUCCASJNR/CommandIQ-Bank-API",
     },
   ];
 
-  const miscProjects = [
-    {
-      title: "ChatGptClone",
-      tagLine: "ChatGptClone is a clone of OpenAI's ChatGPT virtual assistant, built using Python and the openai api",
-      imgUrl: ChatGptC,
-      githubUrl: "https://github.com/CyberRide/ChatGptClone",
-      deployedUrl: "https://github.com/CyberRide/ChatGptClone",
-    },
-    {
-      title: "Human-Detection-Web-App",
-      tagLine:
-        "A Flask-based web app for detecting humans in images using OpenCV and NumPy, with a user-friendly interface built using HTML, Bootstrap, and JavaScript.",
-      imgUrl: humandect,
-      githubUrl: "https://github.com/CyberRide/Human-Detection-Web-App",
-      deployedUrl: "https://github.com/CyberRide/Human-Detection-Web-App",
-    },
-  ];
+  // const miscProjects = [
+  //   {
+  //     title: "ChatGptClone",
+  //     tagLine: "ChatGptClone is a clone of OpenAI's ChatGPT virtual assistant, built using Python and the openai api",
+  //     imgUrl: ChatGptC,
+  //     githubUrl: "https://github.com/CyberRide/ChatGptClone",
+  //     deployedUrl: "https://github.com/CyberRide/ChatGptClone",
+  //   },
+  //   {
+  //     title: "Human-Detection-Web-App",
+  //     tagLine:
+  //       "A Flask-based web app for detecting humans in images using OpenCV and NumPy, with a user-friendly interface built using HTML, Bootstrap, and JavaScript.",
+  //     imgUrl: humandect,
+  //     githubUrl: "https://github.com/CyberRide/Human-Detection-Web-App",
+  //     deployedUrl: "https://github.com/CyberRide/Human-Detection-Web-App",
+  //   },
+  // ];
 
   return (
     <section className="project" id="project">
@@ -91,9 +91,9 @@ export const Projects = () => {
                       <Nav.Item>
                         <Nav.Link eventKey="second">Side Projects</Nav.Link>
                       </Nav.Item>
-                      <Nav.Item>
+                      {/* <Nav.Item>
                         <Nav.Link eventKey="third">Misc</Nav.Link>
-                      </Nav.Item>
+                      </Nav.Item> */}
                     </Nav>
                     <Tab.Content
                       id="slideInUp"
@@ -108,7 +108,7 @@ export const Projects = () => {
                           })}
                         </Row>
                         <a
-                          href="https://github.com/CyberRide"
+                          href="https://github.com/NUCCASJNR"
                           target="_blank"
                           rel="noreferrer"
                         >
@@ -124,7 +124,7 @@ export const Projects = () => {
                           })}
                         </Row>
                         <a
-                          href="https://github.com/CyberRide"
+                        href="https://github.com/NUCCASJNR"
                           target="_blank"
                           rel="noreferrer"
                         >
@@ -134,11 +134,11 @@ export const Projects = () => {
                         </a>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <Row>
+                        {/* <Row>
                           {miscProjects.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
-                        </Row>
+                        </Row> */}
                         <button>
                           <span>View More</span>
                         </button>
