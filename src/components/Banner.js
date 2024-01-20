@@ -16,16 +16,16 @@ export const Banner = () => {
     development: [
       "Python Developer",
       "Backend Engineer",
-      "Web Developer (Django/Flask)",
-      "RESTful API Developer",
-      "Linux System Administrator",
+      // "Web Developer (Django/Flask)",
+      // "RESTful API Developer",
+      // "Linux System Administrator",
     ],
-      languages: ["Python"],
-      frameworks: ["Django", "Flask"],
-      tools: ["Git", "Docker"],
-      databases: ["PostgreSQL", "MySQL"],
-      devOps: ["Linux", "Nginx", "Gunicorn"],
-      testing: ["Unit Testing", "Integration Testing"],
+      // languages: ["Python"],
+      // frameworks: ["Django", "Flask"],
+      // tools: ["Git", "Docker"],
+      // databases: ["PostgreSQL", "MySQL"],
+      // devOps: ["Linux", "Nginx", "Gunicorn"],
+      // testing: ["Unit Testing", "Integration Testing"],
 
   };
   
@@ -95,7 +95,7 @@ export const Banner = () => {
                     </span>
                   </h1>
                   <p>
-                    Python Developer | Backend Engineer |
+                    Python Developer | Backend Engineer
                   </p>
                   <button onClick={() => console.log("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />
