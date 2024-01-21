@@ -6,10 +6,10 @@ import TrackVisibility from "react-on-screen";
 
 export const Contact = () => {
   const formInitialDetails = {
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     email: "",
-    phone: "",
+    contact: "",
     message: "",
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
@@ -26,7 +26,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch("https://portfolio-backend-production-9b67.up.railway.app/send-email/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -35,12 +35,13 @@ export const Contact = () => {
     });
     setButtonText("Send");
     let result = await response.json();
+    // console.log(result);
     setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: "Message sent successfully" });
+    if (result.message) {
+      setStatus({ success: true, message: "Message sent successfully" });
     } else {
       setStatus({
-        succes: false,
+        success: false,
         message: "Something went wrong, please try again later.",
       });
     }
@@ -77,20 +78,20 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
-                          value={formDetails.firstName}
+                          value={formDetails.first_name}
                           placeholder="First Name"
                           onChange={(e) =>
-                            onFormUpdate("firstName", e.target.value)
+                            onFormUpdate("first_name", e.target.value)
                           }
                         />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
-                          value={formDetails.lasttName}
+                          value={formDetails.last_name}
                           placeholder="Last Name"
                           onChange={(e) =>
-                            onFormUpdate("lastName", e.target.value)
+                            onFormUpdate("last_name", e.target.value)
                           }
                         />
                       </Col>
@@ -107,10 +108,10 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="tel"
-                          value={formDetails.phone}
+                          value={formDetails.contact}
                           placeholder="Phone No."
                           onChange={(e) =>
-                            onFormUpdate("phone", e.target.value)
+                            onFormUpdate("contact", e.target.value)
                           }
                         />
                       </Col>
